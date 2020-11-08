@@ -1,0 +1,53 @@
+/*
+styles for slideshow
+ */
+.slideshow {
+    height: 320px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+}
+.slides {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.slideshow div img {
+    height: 100%;
+    width: 100%;
+}
+/*
+styles for personal profile
+ */
+#description {
+    text-align: center;
+}
+body
+{
+    background-image: url(img/img5.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: arial;
+    font-size: 16pt;
+}
+a
+{
+    color: red;
+}
+a:hover
+{
+    color: #d900ff
+}
+.embedded {
+    background-color: #184c65;
+    text-align: center;
+}
+
+/*
+styles for css manipulation
+ */
+#css-manipulation {
+    border: 2px solid #ffffff;
+}
