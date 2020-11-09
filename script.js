@@ -1,5 +1,5 @@
 /*
-scripts for index.html (password validator)
+scripts for password.html (password validator)
  */
 let password = document.getElementById("password")
     , verify = document.getElementById("verify");
