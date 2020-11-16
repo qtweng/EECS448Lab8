@@ -1,37 +1,29 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form action="quiz.php" method="post">
-        <label for="Q1">Question 1: What was the capital of Spain?</label> <br>
-        <input type="radio" name="Q1" value="Libson"> Lisbon<br>
-        <input type="radio" name="Q1" value="Madrid"> Madrid<br>
-        <input type="radio" name="Q1" value="Paris"> Paris<br>
-        <input type="radio" name="Q1" value="Portugal City"> Portugal City<br>
-        <label for="Q2">Question 2: How many nights are there in "Arabian Nights"?</label> <br>
-        <input type="radio" name="Q2" value="100"> 100<br>
-        <input type="radio" name="Q2" value="101"> 101<br>
-        <input type="radio" name="Q2" value="1000"> 1000<br>
-        <input type="radio" name="Q2" value="1001"> 1001<br>
-        <label for="Q2">Question 3: According to Forrest Gump, "life was like..."</label> <br>
-        <input type="radio" name="Q3" value="A bag of lemons"> A bag of lemons<br>
-        <input type="radio" name="Q3" value="A handful of roses"> A handful of roses<br>
-        <input type="radio" name="Q3" value="A lollipop"> A lollipop<br>
-        <input type="radio" name="Q3" value="A box of chocolates"> A box of chocolates<br>
-        <label for="Q2">Question 4: Which U.S. state is known as the sunflower state?</label> <br>
-        <input type="radio" name="Q4" value="California"> California<br>
-        <input type="radio" name="Q4" value="Maine"> Maine<br>
-        <input type="radio" name="Q4" value="Kansas"> Kansas<br>
-        <input type="radio" name="Q4" value="Florida"> Florida<br>
-        <label for="Q2">Question 5: Fe is the chemical symbol for...</label> <br>
-        <input type="radio" name="Q5" value="Iron"> Iron<br>
-        <input type="radio" name="Q5" value="Fluorine"> Fluorine<br>
-        <input type="radio" name="Q5" value="Hydrogen"> Hydrogen<br>
-        <input type="radio" name="Q5" value="Zinc"> Zinc<br>
-        <input type ="submit">
+    <form class="container" action="customerBackend.php" method="post">
+        <label for="username">Username: </label> <br>
+        <input type="email" name="username" id="username" required> <br>
+        <label for="password">Password: </label> <br>
+        <input type="password" name="password" id="password" minlength="8" required> <br>
+        <label for="candle">Mac Inspired Candle ($29.99): </label> <br>
+        <input type="number" name="candle" id="candle" value="0" required> <br>
+        <label for="jail">Mobile Phone Jail Cell ($11.89): </label> <br>
+        <input type="number" name="jail" id="jail" value="0" required> <br>
+        <label for="umbrella">Umbrella Hat ($8.99): </label> <br>
+        <input type="number" name="umbrella" id="umbrella" value="0" required> <br>
+        <label for="shipping">Shipping:</label> <br>
+        <input type="radio" name="shipping" id="shipping" value="Free" required> Free 7 day<br>
+        <input type="radio" name="shipping" id="shipping" value="Express" required> $50.00 over night<br>
+        <input type="radio" name="shipping" id="shipping" value="Standard" required> $5.00 three day<br>
+        <input type="reset">
+        <input type="submit" onclick="validateForm()">
     </form>
+    <script src="formChecker.js"></script>
 </body>
 
 </html>

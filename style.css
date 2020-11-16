@@ -65,3 +65,27 @@ styles for css manipulation
 #css-manipulation {
     border: 2px solid #ffffff;
 }
+
+/*
+Styles for store
+*/
+
+.container {
+    text-align: center;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 5%;
+    border: 5px solid lightgrey;
+    border-radius: 3px;
+    color: #184c65;
+}
+#receipt {
+    margin: 0 auto;
+    border: 5px solid black;
+}
+#receipt th {
+    background-color: #38f88f;
+}
+#receipt td {
+    background-color: #3892f8;
+}
