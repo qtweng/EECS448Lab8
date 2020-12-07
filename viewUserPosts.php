@@ -25,6 +25,8 @@ if ($result = $mysqli->query($query)) {
     echo "</table>";
     /* free result set */
     $result->free();
+} else {
+    echo "Error: " . $result . "<br>" . $mysqli->error;
 }
 
 /* close connection */
