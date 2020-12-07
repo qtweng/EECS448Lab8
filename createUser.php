@@ -11,7 +11,7 @@ if ($mysqli->connect_errno) {
     exit();
 }
 $new_user = "INSERT INTO Users (user_id) 
-            VALUES ('".$username."')";
+            VALUES ('" . $username . "')";
 if ($mysqli->query($new_user) === TRUE) {
     echo "New user created successfully";
 } else {
