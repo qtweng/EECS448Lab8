@@ -12,11 +12,11 @@ if ($mysqli->connect_errno) {
     exit();
 }
 $check_author = "SELECT * FROM Users 
-                WHERE  user_id = '" . $username . "'";
+                WHERE  user_id = '" . $mysqli->real_escape_string($username) . "'";
 $new_post = "INSERT INTO Posts (content, author_id)
-            VALUES ('" . $post . "', '" . $username . "')";
-$results = $mysqli->query($check_author);
-if (mysqli_num_rows($results) > 0) {
+            VALUES ('" . $mysqli->real_escape_string($post) . "', '" . $mysqli->real_escape_string($username) . "')";
+$result = $mysqli->query($check_author);
+if (mysqli_num_rows($result) > 0) {
     if ($mysqli->query($new_post) === TRUE) {
         echo "New post created successfully";
     } else {
@@ -26,6 +26,8 @@ if (mysqli_num_rows($results) > 0) {
     echo "Error: " . $username . " does not exist";
 }
 
+/* free result set */
+$result->free();
 
 /* close connection */
 $mysqli->close();
